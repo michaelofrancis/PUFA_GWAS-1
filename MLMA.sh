@@ -37,7 +37,14 @@ for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --bfile /s
 ################## Third step ##################
 
 # --mlma 
-for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --mlma --bfile /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/AFR/chr"$i"  --grm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr1 --pheno /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/PUFA_GWAS_pheno_M2.AFR.txt.pc.txt.w3FA_NMR_resinv.phen --qcovar /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/PUFA_GWAS_pheno_M2.AFR.txt.pc.txt.qcovar --out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr"$i" --thread-num 32; done
+for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 
+--mlma 
+--bfile /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/AFR/chr"$i" 
+--grm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr1 
+--pheno /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/PUFA_GWAS_pheno_M2.AFR.txt.pc.txt.w3FA_NMR_resinv.phen 
+--qcovar /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/PUFA_GWAS_pheno_M2.AFR.txt.pc.txt.qcovar 
+--out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr"$i" 
+--thread-num 32; done
 
 # Tests
 #for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --mlma --bfile  /scratch/ys98038/UKB/plink1.9_format/AFR_ukb_chr"$i" --grm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/multi_AFR_Omega_3_chr1 --pheno /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/Summary_statistics/bd_pheno_AFR_12_20_Omega3.txt --out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/multi_AFR_Omega_3_chr"$i" --thread-num 32; done
