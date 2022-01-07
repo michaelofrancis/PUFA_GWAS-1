@@ -16,7 +16,13 @@ chr=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22)
 
 ################## First step ##################
 # --make-grm 
-for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --bfile /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/AFR/chr"$i" --make-grm   --maf 0.00001 --out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_no_reml_bfile_AFR_Omega_3_chr"$i" --thread-num 32; done
+for i in ${chr[@]};do 
+/home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 
+--bfile /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/AFR/chr"$i" 
+--make-grm   
+--maf 0.00001 
+--out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_no_reml_bfile_AFR_Omega_3_chr"$i" 
+--thread-num 32; done
 
 # Tests
 #for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --bfile /scratch/ys98038/UKB/plink1.9_format/ukb_chr"$i" --make-grm --out Final_bfile_AFR_Omega_3_chr"$i" --thread-num 32; done
@@ -28,7 +34,11 @@ for i in ${chr[@]};do /home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --bfile /s
 ################## @@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@ ################## 
 
 # --make-grm	--mgrm
-/home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --make-grm  --mgrm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/multi_grm.txt --out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr1 --thread-num 32
+/home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 
+--make-grm  
+--mgrm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/multi_grm.txt 
+--out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/Michael/Michael_multi_AFR_Omega_3_chr1 
+--thread-num 32
 
 # Tests
 #/home/ys98038/apps/GCTA/gcta_1.93.3beta2/gcta64 --make-grm	--mgrm /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/multi_grm1.txt  --out /scratch/ys98038/UKB/plink2_format/PUFA_GWAS/MLMA/multi_AFR_Omega_3_chr1 --thread-num 32
